@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MARVEL-40M+">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MARVEL-40M+: Multi-Level Visual Elaboration for High-Fidelity Text-to-3D Content Creation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="" />
+
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/styles.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://sadilkhan.github.io/text2cad-project/">
+            Text2CAD
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><img src="./static/images/icon.png" alt="MARVEL-40M+ Logo" style="width: 15%;"/><span class="gradient-text">ARVEL-40M+</span> <br> Multi-Level Visual Elaboration for <br> 
+            High-Fidelity Text-to-3D Content Creation</h1>
+          <div class="is-size-5 publication-authors">
+            <div class="author-container">
+                <a class="author">
+                    Sankalp Sinha
+                </a><sup class="sup">1*</sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=QYcfOjEAAAAJ&hl=en&authuser=1&oi=ao"
+                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:sankalp.sinha@dfki.de"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://av.dfki.de/members/sinha/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                    <p style="color:black">* Equally Contributing First Author </p>
+                </div>
+            </div>
+            <span style="padding:10px;"></span>
+            <div class="author-container">
+                <a class="author">
+                    Mohammad Sadil Khan
+                </a><sup class="sup">1* <i class="fa-solid fa-envelope"></i></sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=XIDQo_IAAAAJ&hl=en&authuser=1" target="_blank"><i
+                            class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:mohammad.khan@dfki.de"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://mdsadilkhan.onrender.com/" target="_blank"><i class="fas fa-globe"> </i> Website</a>
+                    <p style="color:black">* Equally Contributing First Author </p>
+                    <p style="color:black"><i class="fa-solid fa-envelope"></i> Corresponding Author</p>
+    
+                </div>
+            </div>
+            <span style="padding:10px;"></span>
+            <div class="author-container">
+                <a class="author">
+                    Muhammad Usama
+                </a><sup class="sup">1</sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=zcRPmUoAAAAJ&hl=en" target="_blank"><i
+                            class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:Muhammad.Usama@dfki.de "><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/muus02" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <span style="padding:10px;"></span>
+            <div class="author-container">
+                <a class="author">
+                    Shino Sam
+                </a><sup class="sup">1</sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=U3wWLBcAAAAJ&hl=en"
+                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:shino.sam@dfki.de"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://scholar.google.com/citations?user=U3wWLBcAAAAJ&hl=en" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <br>
+            <span style="padding:10px;"></span>
+            <div class="author-container">
+                <a class="author">
+                    Didier Stricker
+                </a><sup class="sup">1</sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=ImhXfxgAAAAJ&hl=en&authuser=1&oi=ao"
+                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:didier.stricker@dfki.de "><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://av.dfki.de/members/stricker/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <span style="padding:10px;"></span>
+            <div class="author-container">
+                <a class="author">
+                    Sk Aziz Ali
+                </a><sup class="sup">2</sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=zywjMeMAAAAJ&hl=en&authuser=1&oi=ao"
+                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:skaziz.ali@hyderabad.bits-pilani.ac.in"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://skazizali.com/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <span style="padding:10px;"></span>
+            <div class="author-container">
+                <a class="author">
+                    Muhammad Zeshan Afzal
+                </a><sup class="sup">1</sup>
+                <div class="popup-menu">
+                    <a href="https://scholar.google.com/citations?user=kHMVj6oAAAAJ&hl=en&authuser=1&oi=sra"
+                        target="_blank">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="mailto:muhammad_zeshan.afzal@dfki.uni-kl.de ">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://av.dfki.de/members/afzal/" target="_blank">
+                        <i class="fas fa-globe"></i> Website
+                    </a>
+                </div>
+            </div>
+          </div>
+
+          <div class="is-size-5 publication-authors institutions">
+            <center style="padding-bottom:10px; padding-top: 10px;">
+              <sup class="sup">1</sup><a class="author" href="https://av.dfki.de/" target="_blank"><b> DFKI </b></span> <span
+                  style="padding:10px;"></a>
+              <sup class="sup">1,2</sup><a class="author" href="https://rptu.de/" target="_blank"><b> RPTU</b></a> <span
+                  style="padding:10px;"></span>
+              <sup class="sup">1</sup><a class="author" href="https://blog.mindgarage.de/" target="_blank"><b>
+                      MindGarage</b></a> <span style="padding:10px;"></span>
+              <sup class="sup">2</sup><a class="author" href="https://www.bits-pilani.ac.in/hyderabad/"
+                  target="_blank"><b> BITS Pilani, Hyderabad</b></a>
+          </center>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.17945" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark arxiv_button">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Arxiv</span>
+                </a>
+              </span>
+
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.17945" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark is-disabled">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+        
+            
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark is-disabled">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Marvel-FX3D</span>
+                  </a>
+              </span>
+                <!-- Dataset Page Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark is-disabled">
+                    <span class="icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    <span>Marvel-40M+ Explorer</span>
+                  </a>
+                </span>
+
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark is-disabled">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        
+          <!-- <center>
+            <h3 class="cvpr">CVPR 2025 </h3>
+        </center> -->
+        <img src="./static/images/cvpr_2025_logo.jpg" alt="CVPR 2025" style="width: 30%;"/>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="./static/images/teaser.png" alt="Teaser image." style="padding-bottom: 20px;"/>
+      <h2 class="subtitle has-text-centered">
+        <!-- <span class="dnerf">Marvel-40M+</span> is a large-scale 3D captioning dataset with over 40M+ captions for ~9M 3D models. -->
+        <span class="dnerf" style="font-weight: bold; font-size: 18px; color: #1e90ff;">Marvel-40M+</span> 
+is a large-scale 3D captioning dataset with over <span style="color: #1e90ff;">40M+</span> captions for 
+<span style="color: #1e90ff;">~9M</span> 3D models, featuring <span style="color: #157105;">high-quality, domain-specific, and multi-level </span> text descriptions of 3D assets.
+
+        
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop  is-light">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">🌟 Contributions</h2>
+        <div class="content has-text-justified">
+          <ul class="contribution_list">
+            <li>
+              <span class="contribution_text">
+                <strong>MARVEL-40M+</strong>: We introduce <span class="highlight">MARVEL-40M+</span>, the largest 3D captioning dataset containing 40M+ annotations for 8.9M 3D assets from 7 datasets (Objaverse, Shapenet, Pix3D, ABO, OmniObject3D, Toys4K, GSO). Marvel annotations are generated using an automatic pipeline.
+              </span>
+            </li>
+          
+            <li>
+              <span class="contribution_text">
+                <strong>Multi-Level Annotations</strong>: We propose a multi-level annotation structure that spans from detailed descriptions for fine-grained 3D reconstruction to concise tags for quick modeling.
+              </span>
+            </li>
+          
+            <li>
+              <span class="contribution_text">
+                <strong>Domain-Specific Annotations</strong>: We incorporate human metadata from source datasets into our pipeline to inject domain-specific information in the text descriptions and reduce VLM hallucinations.
+              </span>
+            </li>
+          
+            <li>
+              <span class="contribution_text">
+                <strong>Marvel-FX3D</strong>: We introduce MARVEL-FX3D, a two-stage framework for high-fidelity TT3D generation.
+              </span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <div class="citation_metadata">
+      <code id="metadata1">
+    <span style="color: rgb(195, 92, 7)">@article</span>{<span style="color: rgb(7, 117, 195)">sinha2024marvel</span>,
+      title = {MARVEL-40M+: Multi-Level Visual Elaboration for High-Fidelity Text-to-3D Content Creation},
+      author = {Sinha, Sankalp and Khan, Mohammad Sadil and Usama, Muhammad and Sam, Shino and Stricker, Didier and Ali, Sk Aziz and Afzal, Muhammad Zeshan},
+      journal = {arXiv preprint arXiv:2411.17945},
+      year = {2024}
+    }
+    </code>
+    
+      <button id="copyButton1" onclick="copyText('metadata1', 'copyButton1')" class="copy-button" aria-label="Copy citation">
+        📋
+      </button>
+    </div>
+    
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is borrowed from <a>Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
