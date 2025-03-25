@@ -65,7 +65,7 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
-    preloadInterpolationImages();
+    // preloadInterpolationImages();
 
     $('#interpolation-slider').on('input', function(event) {
       setInterpolationImage(this.value);
@@ -95,3 +95,34 @@ function copyText(elementId, buttonId) {
       console.error('Error copying text: ', err);
   });
 }
+
+
+window.onload = function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    if (slides.length === 0) return;
+
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none"; // Show only the active slide
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  // Attach event listeners to buttons
+  document.querySelector(".slider-btn.left").addEventListener("click", prevSlide);
+  document.querySelector(".slider-btn.right").addEventListener("click", nextSlide);
+
+  showSlide(currentSlide); // Show the first slide
+};

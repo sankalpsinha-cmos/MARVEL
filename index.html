@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="MARVEL-40M+">
+  <meta name="description" content="MARVEL-40M+">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MARVEL-40M+: Multi-Level Visual Elaboration for High-Fidelity Text-to-3D Content Creation</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="" />
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
 
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/styles.css">
@@ -29,254 +29,267 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://sadilkhan.github.io/text2cad-project/">
-            Text2CAD
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://sadilkhan.github.io/text2cad-project/">
+              Text2CAD
+            </a>
+            <a class="navbar-item" href="https://arxiv.org/abs/2405.03660">
+              CICA
+            </a>
+            <a class="navbar-item" href="https://skazizali.com/cadsignet.github.io/">
+              CAD-SIGNet
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><img src="./static/images/icon.png" alt="MARVEL-40M+ Logo" style="width: 15%;"/><span class="gradient-text">ARVEL-40M+</span> <br> Multi-Level Visual Elaboration for <br> 
-            High-Fidelity Text-to-3D Content Creation</h1>
-          <div class="is-size-5 publication-authors">
-            <div class="author-container">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="./static/images/icon.png" alt="MARVEL-40M+ Logo"
+                style="width: 15%;" /><span class="gradient-text">ARVEL-40M+</span> <br> Multi-Level Visual Elaboration
+              for <br>
+              High-Fidelity Text-to-3D Content Creation</h1>
+            <div class="is-size-5 publication-authors">
+              <div class="author-container">
                 <a class="author">
-                    Sankalp Sinha
+                  Sankalp Sinha
                 </a><sup class="sup">1*</sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=QYcfOjEAAAAJ&hl=en&authuser=1&oi=ao"
-                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="mailto:sankalp.sinha@dfki.de"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://av.dfki.de/members/sinha/" target="_blank"><i class="fas fa-globe"></i> Website</a>
-                    <p style="color:black">* Equally Contributing First Author </p>
+                  <a href="https://scholar.google.com/citations?user=QYcfOjEAAAAJ&hl=en&authuser=1&oi=ao"
+                    target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="mailto:sankalp.sinha@dfki.de"><i class="fas fa-envelope"></i> Email</a>
+                  <a href="https://av.dfki.de/members/sinha/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                  <p style="color:black">* Equally Contributing First Author </p>
                 </div>
-            </div>
-            <span style="padding:10px;"></span>
-            <div class="author-container">
+              </div>
+              <span style="padding:10px;"></span>
+              <div class="author-container">
                 <a class="author">
-                    Mohammad Sadil Khan
+                  Mohammad Sadil Khan
                 </a><sup class="sup">1* <i class="fa-solid fa-envelope"></i></sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=XIDQo_IAAAAJ&hl=en&authuser=1" target="_blank"><i
-                            class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="mailto:mohammad.khan@dfki.de"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://mdsadilkhan.onrender.com/" target="_blank"><i class="fas fa-globe"> </i> Website</a>
-                    <p style="color:black">* Equally Contributing First Author </p>
-                    <p style="color:black"><i class="fa-solid fa-envelope"></i> Corresponding Author</p>
-    
+                  <a href="https://scholar.google.com/citations?user=XIDQo_IAAAAJ&hl=en&authuser=1" target="_blank"><i
+                      class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="mailto:mohammad.khan@dfki.de"><i class="fas fa-envelope"></i> Email</a>
+                  <a href="https://mdsadilkhan.onrender.com/" target="_blank"><i class="fas fa-globe"> </i> Website</a>
+                  <p style="color:black">* Equally Contributing First Author </p>
+                  <p style="color:black"><i class="fa-solid fa-envelope"></i> Corresponding Author</p>
+
                 </div>
-            </div>
-            <span style="padding:10px;"></span>
-            <div class="author-container">
+              </div>
+              <span style="padding:10px;"></span>
+              <div class="author-container">
                 <a class="author">
-                    Muhammad Usama
+                  Muhammad Usama
                 </a><sup class="sup">1</sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=zcRPmUoAAAAJ&hl=en" target="_blank"><i
-                            class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="mailto:Muhammad.Usama@dfki.de "><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/muus02" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                  <a href="https://scholar.google.com/citations?user=zcRPmUoAAAAJ&hl=en" target="_blank"><i
+                      class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="mailto:Muhammad.Usama@dfki.de "><i class="fas fa-envelope"></i> Email</a>
+                  <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/muus02" target="_blank"><i
+                      class="fas fa-globe"></i> Website</a>
                 </div>
-            </div>
-            <span style="padding:10px;"></span>
-            <div class="author-container">
+              </div>
+              <span style="padding:10px;"></span>
+              <div class="author-container">
                 <a class="author">
-                    Shino Sam
+                  Shino Sam
                 </a><sup class="sup">1</sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=U3wWLBcAAAAJ&hl=en"
-                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="mailto:shino.sam@dfki.de"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://scholar.google.com/citations?user=U3wWLBcAAAAJ&hl=en" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                  <a href="https://scholar.google.com/citations?user=U3wWLBcAAAAJ&hl=en" target="_blank"><i
+                      class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="mailto:shino.sam@dfki.de"><i class="fas fa-envelope"></i> Email</a>
+                  <a href="https://scholar.google.com/citations?user=U3wWLBcAAAAJ&hl=en" target="_blank"><i
+                      class="fas fa-globe"></i> Website</a>
                 </div>
-            </div>
-            <br>
-            <span style="padding:10px;"></span>
-            <div class="author-container">
+              </div>
+              <br>
+              <span style="padding:10px;"></span>
+              <div class="author-container">
                 <a class="author">
-                    Didier Stricker
+                  Didier Stricker
                 </a><sup class="sup">1</sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=ImhXfxgAAAAJ&hl=en&authuser=1&oi=ao"
-                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="mailto:didier.stricker@dfki.de "><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://av.dfki.de/members/stricker/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                  <a href="https://scholar.google.com/citations?user=ImhXfxgAAAAJ&hl=en&authuser=1&oi=ao"
+                    target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="mailto:didier.stricker@dfki.de "><i class="fas fa-envelope"></i> Email</a>
+                  <a href="https://av.dfki.de/members/stricker/" target="_blank"><i class="fas fa-globe"></i>
+                    Website</a>
                 </div>
-            </div>
-            <span style="padding:10px;"></span>
-            <div class="author-container">
+              </div>
+              <span style="padding:10px;"></span>
+              <div class="author-container">
                 <a class="author">
-                    Sk Aziz Ali
+                  Sk Aziz Ali
                 </a><sup class="sup">2</sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=zywjMeMAAAAJ&hl=en&authuser=1&oi=ao"
-                        target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="mailto:skaziz.ali@hyderabad.bits-pilani.ac.in"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://skazizali.com/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                  <a href="https://scholar.google.com/citations?user=zywjMeMAAAAJ&hl=en&authuser=1&oi=ao"
+                    target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="mailto:skaziz.ali@hyderabad.bits-pilani.ac.in"><i class="fas fa-envelope"></i> Email</a>
+                  <a href="https://skazizali.com/" target="_blank"><i class="fas fa-globe"></i> Website</a>
                 </div>
-            </div>
-            <span style="padding:10px;"></span>
-            <div class="author-container">
+              </div>
+              <span style="padding:10px;"></span>
+              <div class="author-container">
                 <a class="author">
-                    Muhammad Zeshan Afzal
+                  Muhammad Zeshan Afzal
                 </a><sup class="sup">1</sup>
                 <div class="popup-menu">
-                    <a href="https://scholar.google.com/citations?user=kHMVj6oAAAAJ&hl=en&authuser=1&oi=sra"
-                        target="_blank">
-                        <i class="fas fa-graduation-cap"></i> Google Scholar
-                    </a>
-                    <a href="mailto:muhammad_zeshan.afzal@dfki.uni-kl.de ">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
-                    <a href="https://av.dfki.de/members/afzal/" target="_blank">
-                        <i class="fas fa-globe"></i> Website
-                    </a>
-                </div>
-            </div>
-          </div>
-
-          <div class="is-size-5 publication-authors institutions">
-            <center style="padding-bottom:10px; padding-top: 10px;">
-              <sup class="sup">1</sup><a class="author" href="https://av.dfki.de/" target="_blank"><b> DFKI </b></span> <span
-                  style="padding:10px;"></a>
-              <sup class="sup">1,2</sup><a class="author" href="https://rptu.de/" target="_blank"><b> RPTU</b></a> <span
-                  style="padding:10px;"></span>
-              <sup class="sup">1</sup><a class="author" href="https://blog.mindgarage.de/" target="_blank"><b>
-                      MindGarage</b></a> <span style="padding:10px;"></span>
-              <sup class="sup">2</sup><a class="author" href="https://www.bits-pilani.ac.in/hyderabad/"
-                  target="_blank"><b> BITS Pilani, Hyderabad</b></a>
-          </center>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2411.17945" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark arxiv_button">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>Arxiv</span>
-                </a>
-              </span>
-
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2411.17945" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark is-disabled">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-        
-            
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark is-disabled">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Marvel-FX3D</span>
+                  <a href="https://scholar.google.com/citations?user=kHMVj6oAAAAJ&hl=en&authuser=1&oi=sra"
+                    target="_blank">
+                    <i class="fas fa-graduation-cap"></i> Google Scholar
                   </a>
-              </span>
-                <!-- Dataset Page Link. -->
+                  <a href="mailto:muhammad_zeshan.afzal@dfki.uni-kl.de ">
+                    <i class="fas fa-envelope"></i> Email
+                  </a>
+                  <a href="https://av.dfki.de/members/afzal/" target="_blank">
+                    <i class="fas fa-globe"></i> Website
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="is-size-5 publication-authors institutions">
+              <center style="padding-bottom:10px; padding-top: 10px;">
+                <sup class="sup">1</sup><a class="author" href="https://av.dfki.de/" target="_blank"><b> DFKI
+                  </b></span> <span style="padding:10px;"></a>
+                <sup class="sup">1,2</sup><a class="author" href="https://rptu.de/" target="_blank"><b> RPTU</b></a>
+                <span style="padding:10px;"></span>
+                <sup class="sup">1</sup><a class="author" href="https://blog.mindgarage.de/" target="_blank"><b>
+                    MindGarage</b></a> <span style="padding:10px;"></span>
+                <sup class="sup">2</sup><a class="author" href="https://www.bits-pilani.ac.in/hyderabad/"
+                  target="_blank"><b> BITS Pilani, Hyderabad</b></a>
+              </center>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark is-disabled">
+                  <a href="https://arxiv.org/abs/2411.17945" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark arxiv_button">
                     <span class="icon">
-                        <i class="fa-solid fa-globe"></i>
+                      <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>Marvel-40M+ Explorer</span>
+                    <span>Arxiv</span>
                   </a>
                 </span>
 
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark is-disabled">
-                  <span class="icon">
-                    🤗
-                  </span>
-                  <span>Dataset</span>
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2411.17945" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark is-disabled">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
                   </a>
-              </span>
+                </span>
+
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark is-disabled">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Marvel-FX3D</span>
+                  </a>
+                </span>
+                <!-- Dataset Page Link. -->
+                <span class="link-block">
+                  <a href="https://sadilkhan.github.io/Marvel-Explorer/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark demo_button">
+                    <span class="icon">
+                      <i class="fa-solid fa-globe"></i>
+                    </span>
+                    <span>Marvel Explorer</span>
+                  </a>
+                </span>
+
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark is-disabled">
+                    <span class="icon">
+                      🤗
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+              </div>
 
             </div>
 
-          </div>
-        
-          <!-- <center>
+            <!-- <center>
             <h3 class="cvpr">CVPR 2025 </h3>
         </center> -->
-        <img src="./static/images/cvpr_2025_logo.jpg" alt="CVPR 2025" style="width: 30%;"/>
+            <img src="./static/images/cvpr_2025_logo.jpg" alt="CVPR 2025" style="width: 30%;" />
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
 
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
       </video> -->
-      <img src="./static/images/teaser.png" alt="Teaser image." style="padding-bottom: 20px;"/>
-      <h2 class="subtitle has-text-centered">
-        <!-- <span class="dnerf">Marvel-40M+</span> is a large-scale 3D captioning dataset with over 40M+ captions for ~9M 3D models. -->
-        <span class="dnerf" style="font-weight: bold; font-size: 18px; color: #1e90ff;">Marvel-40M+</span> 
-is a large-scale 3D captioning dataset with over <span style="color: #1e90ff;">40M+</span> captions for 
-<span style="color: #1e90ff;">~9M</span> 3D models, featuring <span style="color: #157105;">high-quality, domain-specific, and multi-level </span> text descriptions of 3D assets.
+        <img src="./static/images/teaser.png" alt="Teaser image." style="padding-bottom: 20px;" />
+        <h2 class="subtitle has-text-justified">
+          <!-- <span class="dnerf">Marvel-40M+</span> is a large-scale 3D captioning dataset with over 40M+ captions for ~9M 3D models. -->
+          <span class="dnerf" style="font-weight: bold; font-size: 18px; color: #1e90ff;">Marvel-40M+</span>
+          is a large-scale 3D captioning dataset with over <span style="color: #1e90ff;">40M+</span> captions for
+          <span style="color: #1e90ff;">~9M</span> 3D models, featuring <span style="color: #157105;">high-quality,
+            domain-specific, and multi-level </span> text descriptions of 3D assets.
 
-        
-      </h2>
+
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  
 
 
-<!-- <section class="hero is-light is-small">
+  <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -334,52 +347,224 @@ is a large-scale 3D captioning dataset with over <span style="color: #1e90ff;">4
 </section> -->
 
 
-<section class="section">
-  <div class="container is-max-desktop  is-light">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <h2 class="title is-3">🌟 Contributions</h2>
-        <div class="content has-text-justified">
-          <ul class="contribution_list">
-            <li>
-              <span class="contribution_text">
-                <strong>MARVEL-40M+</strong>: We introduce <span class="highlight">MARVEL-40M+</span>, the largest 3D captioning dataset containing 40M+ annotations for 8.9M 3D assets from 7 datasets (Objaverse, Shapenet, Pix3D, ABO, OmniObject3D, Toys4K, GSO). Marvel annotations are generated using an automatic pipeline.
-              </span>
-            </li>
-          
-            <li>
-              <span class="contribution_text">
-                <strong>Multi-Level Annotations</strong>: We propose a multi-level annotation structure that spans from detailed descriptions for fine-grained 3D reconstruction to concise tags for quick modeling.
-              </span>
-            </li>
-          
-            <li>
-              <span class="contribution_text">
-                <strong>Domain-Specific Annotations</strong>: We incorporate human metadata from source datasets into our pipeline to inject domain-specific information in the text descriptions and reduce VLM hallucinations.
-              </span>
-            </li>
-          
-            <li>
-              <span class="contribution_text">
-                <strong>Marvel-FX3D</strong>: We introduce MARVEL-FX3D, a two-stage framework for high-fidelity TT3D generation.
-              </span>
-            </li>
-          </ul>
+  <section class="section">
+    <div class="container is-max-desktop  is-light">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">🌟 Contributions</h2>
+          <div class="content has-text-justified">
+            <ul class="contribution_list">
+              <li>
+                <span class="contribution_text">
+                  <strong>MARVEL-40M+</strong>: We introduce <span class="highlight">MARVEL-40M+</span>, the largest 3D
+                  captioning dataset containing 40M+ annotations for 8.9M 3D assets from 7 datasets (Objaverse,
+                  Shapenet, Pix3D, ABO, OmniObject3D, Toys4K, GSO). Marvel annotations are generated using an automatic
+                  pipeline.
+                </span>
+              </li>
+
+              <li>
+                <span class="contribution_text">
+                  <strong>Multi-Level Annotations</strong>: We propose a multi-level annotation structure that spans
+                  from detailed descriptions for fine-grained 3D reconstruction to concise tags for quick modeling.
+                </span>
+              </li>
+
+              <li>
+                <span class="contribution_text">
+                  <strong>Domain-Specific Annotations</strong>: We incorporate human metadata from source datasets into
+                  our pipeline to inject domain-specific information in the text descriptions and reduce VLM
+                  hallucinations.
+                </span>
+              </li>
+
+              <li>
+                <span class="contribution_text">
+                  <strong>Marvel-FX3D</strong>: We introduce MARVEL-FX3D, a two-stage framework for high-fidelity TT3D
+                  generation.
+                </span>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop  is-light">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3"> 🛠️ Marvel Annotation Pipeline </h2>
+          <div>
+            <img src="./static/images/annot.png" alt="Marvel Annotation Pipeline" style="width: 100%;" />
+            <h2 class="subtitle has-text-justified">
+            <span>MARVEL annotation pipeline starts with human metadata and rendered multi-view images to create detailed visual descriptions using InternVL-2. 
+            These contain <b style="color: #8c52ff;">object names</b>, <b style="color: #0a8b4d;">shapes</b>, 
+            <b style="color: #cc6600;">textures</b>, <b style="color: #5271ff;">colors</b>, and <b style="color: #b82edf;">contextual environments</b>. 
+            Qwen2 then processes these descriptions into five hierarchical levels, progressively compressing different aspects of the 3D assets.</span>
+          </h2>
+          </div>
 
         </div>
       </div>
     </div>
+  </section>
 
+
+  <section class="section">
+    <div class="container is-max-desktop is-light">
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-3"> 🧩 Multi Level Annotations </h2>
+                <div>
+                      <img src="./static/images/multi_level.png" alt="Multi Level Annotation">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop is-light">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3"> Domain Specific Annotations </h2>
+
+          <!-- <button class="slider-btn left" onclick="prevSlide()">&#10094;</button> -->
+        <div class="slider-container">
+          
+
+          <!-- Wrapper for Sketchfab models -->
+          <div class="slider-wrapper">
+           
+            <div class="slide">
+              <h2 class="subtitle-1">Anime Characters</h2>
+              <iframe src="https://sketchfab.com/models/554e124c17ee40bfbd4222a1a89e0036/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The 3D model features Roronoa Zoro from One Piece, holding three swords, with a blue dragon coiling around him. A water splash surrounds them, adding intensity to the dynamic scene.</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Game Characters</h2>
+
+              <iframe src="https://sketchfab.com/models/6672ed4758ed4f8ab77ddae20b5019e6/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The 3D model shows Ghost Jawbone from Call of Duty Mobile. He wears a black helmet, a brownish-khaki cape, a dark green shirt with a tattoo, an olive green vest with a red pouch, olive green cargo pants, and dark combat boots. The character stands upright with a flowing cape.</i></p>
+            </div>
+            
+
+            <div class="slide">
+              <h2 class="subtitle-1">Automotive</h2>
+              <iframe src="https://sketchfab.com/models/a46108178fe04beab93efb41088eedf4/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The Harley Davidson XR1200x is a black motorcycle with a sturdy frame, V-twin engine, and dual exhaust pipes. It has a black leather seat, raised handlebars, and a round headlight. The bike is streamlined and aggressive-looking, with disc brakes and visible suspension.</i></p>
+            </div>
+            
+            <div class="slide">
+              <h2 class="subtitle-1">CAD Model</h2>
+              <iframe src="https://sketchfab.com/models/25fde36e9e4a4339a6927d0f14a8ecde/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The Keystone 6" Knife Gate Valve is a cylindrical industrial valve with a rectangular gearbox and a handwheel for manual operation. It has symmetrical bolt holes and is made of smooth, gray metal. Used for controlling fluid flow in harsh conditions.</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Flower</h2>
+              <iframe src="https://sketchfab.com/models/95ad071ace894098b1a5431c4a6c3567/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>A 3D model of a Marsh Marigold with yellow flowers and green, heart-shaped leaves. The flowers have five petals and a center with stamens. Slender stems support the leaves and flowers. The model is bright and simple.</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Atomic Structure</h2>
+              <iframe src="https://sketchfab.com/models/ec26547a2e4e40f4975b8689eb133687/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>Vitamin B2 (Riboflavin) is a complex molecule with a central ring system and extending side chains. It has an elongated, irregular shape and uses color coding to differentiate atoms: carbon (grey/black), oxygen (red), nitrogen (blue), and hydrogen (white/grey).</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Food</h2>
+              <iframe src="https://sketchfab.com/models/2fb933a56822411f982e259e3b04671c/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>Three pieces of salmon nigiri sushi on a wooden board, with a small bowl of soy sauce. The sushi has oval 
+                rice balls topped with pink salmon, green and red garnishes. The wooden board has rounded edges, and the soy sauce 
+                bowl is circular and matte. A small green spot is on the board.</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Daily Object</h2>
+              <iframe src="https://sketchfab.com/models/936288f27801425882fa7c7979939ba7/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The Siemens Coffee Machine is a sleek, rectangular device with a bean hopper on top, a control panel below, a transparent water tank on the left, and a metallic drip tray at the bottom. It is mostly black with a 
+                transparent tank and a silver tray.</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Mythological Character</h2>
+              <iframe src="https://sketchfab.com/models/abf2bad197324238bfbaa36a023cb5b6/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The 3D model shows Perseus, a human figure in ancient Greek armor, riding a white winged horse named Pegasus. They appear to be flying, with Perseus holding a sword and shield. The horse has smooth white fur and feathered wings.</i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Monument</h2>
+              <iframe src="https://sketchfab.com/models/88946f0b3be444fc9c85be22af10d152/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i>The Monument of Dante Alighieri shows a standing figure of Dante in flowing robes, holding a book. It stands on a decorated stone plinth and is made of smooth, polished marble. Located outdoors in Padua, Italy. </i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Scene</h2>
+              <iframe src="https://sketchfab.com/models/a7a4164592bf448aa446f13ed1997401/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i> A colorful flamingo stands in a tranquil pond, surrounded by green lily pads with white flowers and tall grasses. The pond water is glossy, and the flamingo has a rainbow gradient on its wings. The base is flat and brownish, creating a peaceful, natural scene. </i></p>
+            </div>
+
+            <div class="slide">
+              <h2 class="subtitle-1">Digital Surface</h2>
+              <iframe src="https://sketchfab.com/models/081a30689cad4d47b77db98eec45bb54/embed" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+              <br>
+              <p class="sketchfab-captions"><i> The 3D model shows the Glaciar Perito Moreno in Santa Cruz, Argentina. It features jagged mountains, a large turquoise lake, and ice formations extending into the water. The surrounding area has green grass and brown rocks. Rivers flow into the lake from the mountains. The scene is natural and isolated, highlighting the glacier's grandeur. </i></p>
+            </div>
 
 
+          </div>
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <div class="citation_metadata">
-      <code id="metadata1">
+          
+        </div>
+        <!-- Buttons outside slider-container -->
+<button class="slider-btn left" onclick="prevSlide()">&#10094;</button>
+<button class="slider-btn right" onclick="nextSlide()">&#10095;</button>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop  is-light">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3"> 🎨 MARVEL-FX3D </h2>
+        <div>
+          <img src="./static/images/marvel_fx3d.png" alt="Marvel Annotation Pipeline" style="width: 100%;" />
+          <h2 class="subtitle has-text-justified">
+          <span><span class="highlight dnerf">MARVEL-FX3D</span> is our Text-to-3D pipeline finetunes Stable Diffusion 3.5 with this dataset and uses pretrained Stable Fast 3D to generate a textured mesh in 15s.</span>
+        </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <div class="citation_metadata">
+        <code id="metadata1">
     <span style="color: rgb(195, 92, 7)">@article</span>{<span style="color: rgb(7, 117, 195)">sinha2024marvel</span>,
       title = {MARVEL-40M+: Multi-Level Visual Elaboration for High-Fidelity Text-to-3D Content Creation},
       author = {Sinha, Sankalp and Khan, Mohammad Sadil and Usama, Muhammad and Sam, Shino and Stricker, Didier and Ali, Sk Aziz and Afzal, Muhammad Zeshan},
@@ -387,39 +572,41 @@ is a large-scale 3D captioning dataset with over <span style="color: #1e90ff;">4
       year = {2024}
     }
     </code>
-    
-      <button id="copyButton1" onclick="copyText('metadata1', 'copyButton1')" class="copy-button" aria-label="Copy citation">
-        📋
-      </button>
-    </div>
-    
-</section>
+
+        <button id="copyButton1" onclick="copyText('metadata1', 'copyButton1')" class="copy-button"
+          aria-label="Copy citation">
+          📋
+        </button>
+      </div>
+
+  </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <!-- <a class="icon-link"
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a> -->
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is borrowed from <a>Nerfies</a>, licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is borrowed from <a>Nerfies</a>, licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>

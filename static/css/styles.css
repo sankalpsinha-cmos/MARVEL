@@ -91,7 +91,7 @@
     padding: 10px 20px;
     background-color: #2776e4;
     transition: background-color 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-size: 14px;
 }
 
@@ -164,19 +164,16 @@ author-block {
 
 .dataset_button {
     background: linear-gradient(to right, #4caf50, #81c784); /* Gradient from green to light green */
-
     cursor: pointer;
 }
 
 .demo_button {
-    background: linear-gradient(to right, #ff9800, #ffc107); /* Gradient from orange to yellow */
-
+    background: linear-gradient(to right, #1e1e2f, #3a3a5e); /* Dark purple-blue gradient */
     cursor: pointer;
 }
 
 .paper_button {
     background: linear-gradient(to right, #3f51b5, #5c6bc0); /* Gradient from deep blue to soft blue */
-
     cursor: pointer;
 }
 
@@ -333,41 +330,125 @@ code {
   }
   
 
-
-  .updates_list {
+  .todo_list {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
-    border-left: 3px solid #0a66c2;
+    margin: 0;
   }
   
-  .updates_list li {
-    margin-bottom: 14px;
-    padding-left: 24px;
+  .todo_list li {
     position: relative;
+    padding: 12px 16px 12px 40px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0a66c2;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    transition: background 0.3s ease;
   }
   
-  /* ✅ Tick Icon */
-  .updates_list li.tick::before {
+  .todo_list li::before {
+    content: "⬜";
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Optional: hover effect */
+  .todo_list li:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+  }
+  
+  /* Optional: completed state */
+  .todo_list li.done::before {
     content: "✅";
-    position: absolute;
-    left: -28px;
-    top: 0;
-    font-size: 16px;
-  }
-  
-  /* ◼️ Square Icon */
-  .updates_list li.square::before {
-    content: "◼️";
-    position: absolute;
-    left: -28px;
-    top: 0;
-    font-size: 16px;
-  }
-  
-  .update_date {
+    color: green;
+    transition: color 0.3s ease;
     font-weight: bold;
-    color: #0a66c2;
-    margin-right: 8px;
   }
   
+  .todo_list li.done {
+    color: #aaa;
+    text-decoration: line-through;
+  }
+  
+  
+
+
+.caption {
+    display: flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Aligns text vertically */
+    text-align: justify; /* Justifies the text */
+    line-height: 1.6; /* Improves readability */
+  }
+  
+
+  .slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    max-width: 75%;
+    margin: auto;
+  }
+
+  .slide {
+    min-width: 100%;
+    display: none;
+    text-align: center;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .slider-btn.left {
+    left: 10px;
+  }
+
+  .slider-btn.right {
+    right: 10px;
+  }
+
+
+.sketchfab-embed-wrapper{
+    width: 75%;
+    /* height: 100%; */
+    margin: 0 auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.sketchfab-captions {
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+.subtitle-1{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
