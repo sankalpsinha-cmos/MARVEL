@@ -457,7 +457,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         
-        <h2 class="title is-3">Domain Specific Annotations</h2>
+        <h2 class="title is-3">🧬 Domain Specific Annotations</h2>
         
         <div>
           <h2 class="subtitle has-text-justified">
@@ -661,111 +661,204 @@
   </div> <!-- End container -->
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop is-light">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3"> 🎨 MARVEL-FX3D </h2>
+
+        <h2 class="title is-3">🎨 MARVEL-FX3D</h2>
         <div>
           <img src="./static/images/marvel_fx3d.png" alt="Marvel Annotation Pipeline" style="width: 100%;" />
           <h2 class="subtitle has-text-justified">
-            <span><span class="highlight dnerf">MARVEL-FX3D</span> is our Text-to-3D pipeline that finetunes Stable Diffusion 3.5 on MARVEL captions of Objaverse dataset and uses pretrained Stable Fast 3D to generate a textured mesh in 15s.</span>
+            <span>
+              <span class="highlight dnerf">MARVEL-FX3D</span> is our Text-to-3D pipeline that finetunes Stable Diffusion 3.5
+              on MARVEL captions of Objaverse dataset and uses pretrained Stable Fast 3D to generate a textured mesh in 15s.
+            </span>
           </h2>
         </div>
 
-        <!-- Cards Grid -->
-        <div class="glb-grid">
-          
-          <!-- CARD -->
-          <div class="glb-card">
-            <div class="glb-tag">GLB ✓</div>
-            <model-viewer src="./static/images/fx3d_results/laser_cutter.glb"
-                          camera-controls 
-                          auto-rotate 
-                          auto-rotate-delay="1000" 
-                          interaction-prompt="none" 
-                          alt="Laser Cutter Model"
-                          rotation-per-second="45deg"
-                          style="width: 100%; height: 250px;">
-            </model-viewer>
-            <p class="glb-caption">The Fusion Epilog Laser Cutter is a rectangular machine with a robust design. It has a transparent blue cover over the cutting area, a hinged lid for access, and a control panel with buttons and a screen. The base plate supports the material being cut, and side panels provide access for loading and ventilation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop is-light">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+
+        <h2 class="title is-3">🧊 Text-to-3D Generation</h2>
+
+        <!-- === FX3D SLIDER NAVIGATION === -->
+        <div class="fx3d-slider-nav">
+          <button class="fx3d-slider-btn left">&#10094;</button>
+          <div class="fx3d-dots">
+            <span class="fx3d-dot" onclick="fx3dGoToSlide(0)"></span>
+            <span class="fx3d-dot" onclick="fx3dGoToSlide(1)"></span>
+            <span class="fx3d-dot" onclick="fx3dGoToSlide(2)"></span>
+            <span class="fx3d-dot" onclick="fx3dGoToSlide(2)"></span>
           </div>
-
-          <!-- Duplicate the above card block for each model -->
-          <div class="glb-card">
-            <div class="glb-tag">GLB ✓</div>
-            <model-viewer src="./static/images/fx3d_results/stone_moss.glb"
-            camera-controls 
-            auto-rotate 
-            auto-rotate-delay="1000" 
-            interaction-prompt="none" 
-            alt="Laser Cutter Model"
-            rotation-per-second="45deg"
-            style="width: 100%; height: 250px;">
-            </model-viewer>
-            <p class="glb-caption">The 3D model is a segment of an old stone wall with irregularly shaped stones. It has a rough, uneven texture with moss and plants growing on top. The colors are mostly gray and beige with green moss patches. The wall looks weathered and aged, suggesting a historic structure.</p>
-          </div>
-
-          <div class="glb-card">
-            <div class="glb-tag">GLB ✓</div>
-            <model-viewer src="./static/images/fx3d_results/kunai.glb"
-            camera-controls 
-            auto-rotate 
-            auto-rotate-delay="1000" 
-            interaction-prompt="none" 
-            alt="Laser Cutter Model"
-            rotation-per-second="45deg"
-            style="width: 100%; height: 250px;">
-            </model-viewer>
-            <p class="glb-caption">The 3D model is of a pair of traditional Japanese throwing knives called kunai. Each has a long, pointed blade and a cylindrical handle with a circular ring and a small loop. The surface is smooth and matte, and the model is uniformly white.</p>
-          </div>
-
-          <div class="glb-card">
-            <div class="glb-tag">GLB ✓</div>
-            <model-viewer src="./static/images/fx3d_results/wooden_box.glb"
-            camera-controls 
-            auto-rotate 
-            auto-rotate-delay="1000" 
-            interaction-prompt="none" 
-            alt="Laser Cutter Model"
-            rotation-per-second="45deg"
-            style="width: 100%; height: 250px;">
-            </model-viewer>
-            <p class="glb-caption">A wooden crate with a flat lid, four sides, a bottom, and metal reinforcement bars. It has visible wood grain and dark, aged metal. One side features green graffiti text.</p>
-          </div>
-
-          <div class="glb-card">
-            <div class="glb-tag">GLB ✓</div>
-            <model-viewer src="./static/images/fx3d_results/canon.glb"
-            camera-controls 
-            auto-rotate 
-            auto-rotate-delay="1000" 
-            interaction-prompt="none" 
-            alt="Laser Cutter Model"
-            rotation-per-second="45deg"
-            style="width: 100%; height: 250px;">
-            </model-viewer>
-            <p class="glb-caption">A destroyed 2S3 Akatsiya cannon, elongated and cylindrical, with a curved barrel and angular turret. Heavily damaged, rusted, and charred, set in a desolate, debris-strewn battlefield.</p>
-          </div>
-
-          <div class="glb-card">
-            <div class="glb-tag">GLB ✓</div>
-            <model-viewer src="./static/images/fx3d_results/garden.glb"
-            camera-controls 
-            auto-rotate 
-            auto-rotate-delay="1000" 
-            interaction-prompt="none" 
-            alt="Laser Cutter Model"
-            rotation-per-second="45deg"
-            style="width: 100%; height: 250px;">
-            </model-viewer>
-            <p class="glb-caption">A tall palm tree with a slender trunk and a wide base, topped with large, feather-like fronds. Small rocks and plants surround the base, set on sandy ground. The trunk is brown, and the fronds are green.</p>
-          </div>
-
-          <!-- Add more cards as needed... -->
-
+          <button class="fx3d-slider-btn right">&#10095;</button>
         </div>
-        <!-- End glb-grid -->
+
+        <!-- === FX3D SLIDER === -->
+        <div class="fx3d-slider-container">
+          <div class="fx3d-slider-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="fx3d-slide">
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/spear.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="5"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Spear Model"></model-viewer>
+                <p class="fx3d-caption">A traditional spear with a decorative spearhead, a smooth metallic shaft, and a teardrop-shaped gem. The spearhead has three elongated blades and a spherical section with small protrusions. It is primarily metallic blue with a cyan or turquoise gem.</p>
+              </div>
+
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/stone.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="2"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Stone Model"></model-viewer>
+                <p class="fx3d-caption">A rocky landscape with a large, dark blue, jagged rock and smaller, smooth gray boulders. A small, bright cyan dot is in the upper part.</p>
+              </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="fx3d-slide">
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/laser_cutter.glb" 
+                camera-controls 
+                            auto-rotate 
+                            auto-rotate-delay="1000" 
+                            interaction-prompt="none" 
+                            alt="Laser Cutter Model"
+                            tone-mapping="natural"
+                            exposure="2"
+                            shadow-intensity="1"
+                            rotation-per-second="45deg"
+                            style="width: 100%; height: 250px;"
+                  alt="Laser Cutter Model"></model-viewer>
+                <p class="fx3d-caption">The Fusion Epilog Laser Cutter is a rectangular machine with a robust design. It has a transparent blue cover over the cutting area, a hinged lid for access, and a control panel with buttons and a screen. The base plate supports the material being cut, and side panels provide access for loading and ventilation.</p>
+              </div>
+              
+
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/stone_moss.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="2"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Mossy Stone Wall"></model-viewer>
+                <p class="fx3d-caption">The 3D model is a segment of an old stone wall with irregularly shaped stones. It has a rough, uneven texture with moss and plants growing on top. The colors are mostly gray and beige with green moss patches. The wall looks weathered and aged, suggesting a historic structure.</p>
+              </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="fx3d-slide">
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/kunai.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="2"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Kunai Model"></model-viewer>
+                <p class="fx3d-caption">The 3D model is of a pair of traditional Japanese throwing knives called kunai. Each has a long, pointed blade and a cylindrical handle with a circular ring and a small loop. The surface is smooth and matte, and the model is uniformly white.</p>
+              </div>
+
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/garden.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="1"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Palm Tree Model"></model-viewer>
+                <p class="fx3d-caption">A tall palm tree with a slender trunk and a wide base, topped with large, feather-like fronds. Small rocks and plants surround the base, set on sandy ground. The trunk is brown, and the fronds are green.
+                </p>
+              </div>
+
+
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="fx3d-slide">
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/wooden_box.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="2"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Kunai Model"></model-viewer>
+                <p class="fx3d-caption">A wooden crate with a flat lid, four sides, a bottom, and metal reinforcement bars. It has visible wood grain and dark, aged metal. One side features green graffiti text.</p>
+              </div>
+
+              <div class="fx3d-card">
+                <div class="glb-tag">GLB ✓</div>
+                <model-viewer src="./static/images/fx3d_results/canon.glb" camera-controls 
+                auto-rotate 
+                auto-rotate-delay="1000" 
+                interaction-prompt="none" 
+                alt="Laser Cutter Model"
+                tone-mapping="natural"
+                exposure="1"
+                shadow-intensity="1"
+                rotation-per-second="45deg"
+                style="width: 100%; height: 250px;"
+                  alt="Palm Tree Model"></model-viewer>
+                <p class="fx3d-caption">A destroyed 2S3 Akatsiya cannon, elongated and cylindrical, with a curved barrel and angular turret. Heavily damaged, rusted, and charred, set in a desolate, debris-strewn battlefield.
+                </p>
+              </div>
+
+              
+            </div>
+
+          </div>
+        </div>
 
       </div>
     </div>
@@ -775,6 +868,7 @@
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
+      
       <h2 class="title">BibTeX</h2>
       <div class="citation_metadata">
         <code id="metadata1">

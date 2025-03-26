@@ -533,13 +533,100 @@ code {
   padding: 4px 8px;
   border-radius: 8px;
   font-weight: bold;
+  display: none;
 }
 
-.glb-caption {
+
+
+.fx3d-caption {
   font-family: 'Caveat', cursive;
   /* font-style: italic; */
   font-size: 26px;
   padding-top: 12px;
   text-align: center;
   line-height: 1.4;
+}
+
+
+
+.fx3d-slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.fx3d-slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.fx3d-slide {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+}
+
+.fx3d-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.fx3d-card:hover {
+  transform: translateY(-5px);
+}
+
+.fx3d-card:hover .glb-tag {
+  display: block;
+}
+
+.fx3d-slider-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  z-index: 10;
+}
+
+.fx3d-slider-btn {
+  background-color: #6567C9;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fx3d-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx3d-dot {
+  height: 12px;
+  width: 12px;
+  background-color: #6567C9;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fx3d-dot.active,
+.fx3d-dot:hover {
+  height: 16px;
+  width: 16px;
 }

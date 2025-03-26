@@ -95,4 +95,46 @@ window.onload = function () {
 
   // Initialize slider
   showSlide(currentIndex);
+
+  let fx3dIndex = 0;
+  const fx3dSlides = document.querySelectorAll('.fx3d-slide');
+  const fx3dDots = document.querySelectorAll('.fx3d-dot');
+  const fx3dWrapper = document.querySelector('.fx3d-slider-wrapper');
+
+  function fx3dShowSlide(index) {
+    if (index >= fx3dSlides.length) index = 0;
+    if (index < 0) index = fx3dSlides.length - 1;
+    fx3dIndex = index;
+
+    fx3dWrapper.style.transform = `translateX(-${index * 100}%)`;
+
+    fx3dDots.forEach(dot => dot.classList.remove('active'));
+    fx3dDots[fx3dIndex].classList.add('active');
+  }
+
+  function fx3dNextSlide() {
+    fx3dShowSlide(fx3dIndex + 1);
+  }
+
+  function fx3dPrevSlide() {
+    fx3dShowSlide(fx3dIndex - 1);
+  }
+
+  function fx3dGoToSlide(index) {
+    fx3dShowSlide(index);
+  }
+
+  // Attach listeners
+  document.querySelector(".fx3d-slider-btn.left").addEventListener("click", fx3dPrevSlide);
+  document.querySelector(".fx3d-slider-btn.right").addEventListener("click", fx3dNextSlide);
+  fx3dDots.forEach((dot, i) => dot.addEventListener("click", () => fx3dGoToSlide(i)));
+
+  fx3dShowSlide(fx3dIndex);
+
 }
+
+
+
+// window.onload = function () {
+  
+// }
