@@ -1,81 +1,4 @@
-window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "./static/interpolation/stacked";
-var NUM_INTERP_FRAMES = 240;
-
-var interp_images = [];
-function preloadInterpolationImages() {
-  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
-    interp_images[i] = new Image();
-    interp_images[i].src = path;
-  }
-}
-
-function setInterpolationImage(i) {
-  var image = interp_images[i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
-}
-
-
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-    });
-
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 3,
-			loop: true,
-			infinite: true,
-			autoplay: false,
-			autoplaySpeed: 3000,
-    }
-
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-
-    // Loop on each carousel initialized
-    for(var i = 0; i < carousels.length; i++) {
-    	// Add listener to  event
-    	carousels[i].on('before:show', state => {
-    		console.log(state);
-    	});
-    }
-
-    // Access to bulmaCarousel instance of an element
-    var element = document.querySelector('#my-element');
-    if (element && element.bulmaCarousel) {
-    	// bulmaCarousel instance is available as element.bulmaCarousel
-    	element.bulmaCarousel.on('before-show', function(state) {
-    		console.log(state);
-    	});
-    }
-
-    /*var player = document.getElementById('interpolation-video');
-    player.addEventListener('loadedmetadata', function() {
-      $('#interpolation-slider').on('input', function(event) {
-        console.log(this.value, player.duration);
-        player.currentTime = player.duration / 100 * this.value;
-      })
-    }, false);*/
-    // preloadInterpolationImages();
-
-    $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value);
-    });
-    setInterpolationImage(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
-
-    bulmaSlider.attach();
-
-})
 
 
 function copyText(elementId, buttonId) {
@@ -97,32 +20,79 @@ function copyText(elementId, buttonId) {
 }
 
 
+// window.onload = function () {
+//   let currentSlide = 0;
+//   const slides = document.querySelectorAll('.slide');
+//   const totalSlides = slides.length;
+
+//   function showSlide(index) {
+//     if (slides.length === 0) return;
+
+//     slides.forEach((slide, i) => {
+//       slide.style.display = i === index ? "block" : "none"; // Show only the active slide
+//     });
+//   }
+
+//   function nextSlide() {
+//     currentSlide = (currentSlide + 1) % totalSlides;
+//     showSlide(currentSlide);
+//   }
+
+//   function prevSlide() {
+//     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+//     showSlide(currentSlide);
+//   }
+
+//   // Attach event listeners to buttons
+//   document.querySelector(".slider-btn.left").addEventListener("click", prevSlide);
+//   document.querySelector(".slider-btn.right").addEventListener("click", nextSlide);
+
+//   showSlide(currentSlide); // Show the first slide
+// };
+
 window.onload = function () {
-  let currentSlide = 0;
+  let currentIndex = 0;
   const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
+  const dots = document.querySelectorAll('.dot');
 
   function showSlide(index) {
-    if (slides.length === 0) return;
+    // Wrap around if index is out of range
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    currentIndex = index;
 
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? "block" : "none"; // Show only the active slide
-    });
+    // Hide all slides and remove 'active' class from dots
+    slides.forEach((slide) => slide.classList.remove('active'));
+    dots.forEach((dot) => dot.classList.remove('active'));
+
+    // Show the current slide and highlight the current dot
+    slides[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('active');
   }
 
   function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
+    showSlide(currentIndex + 1);
   }
 
   function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
+    showSlide(currentIndex - 1);
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
   }
 
   // Attach event listeners to buttons
   document.querySelector(".slider-btn.left").addEventListener("click", prevSlide);
   document.querySelector(".slider-btn.right").addEventListener("click", nextSlide);
 
-  showSlide(currentSlide); // Show the first slide
-};
+  // Make dots clickable by adding event listeners to each dot
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+    });
+  });
+
+  // Initialize slider
+  showSlide(currentIndex);
+}
