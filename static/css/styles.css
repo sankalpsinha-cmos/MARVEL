@@ -172,8 +172,8 @@ author-block {
 .paper_button {
   background: linear-gradient(
     to right,
-    #3f51b5,
-    #5c6bc0
+    #06156f,
+    #37448d
   ); /* Gradient from deep blue to soft blue */
   cursor: pointer;
 }

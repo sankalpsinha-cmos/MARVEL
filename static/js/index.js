@@ -147,6 +147,7 @@ let chartsaccuracyRendered = false;
 let animationDuration = 1500;
 let fontSize = 16;
 let captionChartsRendered = false;
+let radarChartRendered = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".main-tab");
@@ -192,11 +193,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      let radarChartRendered = false;
+      
       if (target === "generation" && !radarChartRendered) {
         renderTextTo3DChart();
         radarChartRendered = true;
       }
+
+
     });
   });
 
@@ -218,8 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Auto-render if Linguistic is default visible
   renderAllCharts();
-  // renderPieCharts();
-  // renderCaptionCharts();
   chartsRendered = true;
 });
 
