@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="" />
-    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/styles.css">
   <link rel="icon" href="./static/images/icon.png">
@@ -28,18 +28,19 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS11NY49DY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PS11NY49DY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PS11NY49DY');
-</script>
+    gtag('config', 'G-PS11NY49DY');
+  </script>
 
 </head>
 
@@ -231,7 +232,8 @@
 
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark is-disabled">
+                  <a href="https://github.com/SadilKhan/MARVEL-FX3D" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark code_button">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -251,7 +253,8 @@
 
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark is-disabled">
+                  <a href="https://huggingface.co/datasets/sankalpsinha77/MARVEL-40M" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark dataset_button">
                     <span class="icon">
                       🤗
                     </span>
@@ -264,8 +267,8 @@
             </div>
 
             <!-- <center>
-            <h3 class="cvpr">CVPR 2025 </h3>
-        </center> -->
+          <h3 class="cvpr">CVPR 2025 </h3>
+      </center> -->
             <img src="./static/images/cvpr_2025_logo.jpg" alt="CVPR 2025" style="width: 30%;" />
 
           </div>
@@ -282,9 +285,9 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
+      <source src="./static/videos/teaser.mp4"
+              type="video/mp4">
+    </video> -->
         <img src="./static/images/teaser.png" alt="Teaser image." style="padding-bottom: 20px;" />
         <h2 class="subtitle has-text-justified">
           <!-- <span class="dnerf">Marvel-40M+</span> is a large-scale 3D captioning dataset with over 40M+ captions for ~9M 3D models. -->
@@ -299,67 +302,8 @@
     </div>
   </section>
 
-  
 
-
-  <!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
+  <!-- ---------------------------- Contributions ---------------------------- -->
   <section class="section">
     <div class="container is-max-desktop  is-light">
       <div class="columns is-centered has-text-centered">
@@ -405,6 +349,7 @@
       </div>
   </section>
 
+  <!-- ----------------------------- MARVEL ANNOTATION ------------------------------ -->
   <section class="section">
     <div class="container is-max-desktop  is-light">
       <div class="columns is-centered has-text-centered">
@@ -412,13 +357,17 @@
           <h2 class="title is-3"> 🛠️ Marvel Annotation Pipeline </h2>
           <div>
             <h2 class="subtitle has-text-justified">
-            <span>We introduce a multi-stage pipeline for automatic 3D captioning. 
-              Our pipeline starts with human metadata and rendered multi-view images to create detailed visual descriptions using InternVL2. 
-              These contain <b style="color: #8c52ff;">object names</b>, <b style="color: #0a8b4d;">shapes</b>, 
-              <b style="color: #cc6600;">textures</b>, <b style="color: #5271ff;">colors</b>, and <b style="color: #b82edf;">contextual environments</b>. 
-              Qwen2 then processes these descriptions into five hierarchical levels, progressively compressing different aspects of the 3D assets.</span></h2>
+              <span>We introduce a multi-stage pipeline for automatic 3D captioning.
+                Our pipeline starts with human metadata and rendered multi-view images to create detailed visual
+                descriptions using InternVL2.
+                These contain <b style="color: #8c52ff;">object names</b>, <b style="color: #0a8b4d;">shapes</b>,
+                <b style="color: #cc6600;">textures</b>, <b style="color: #5271ff;">colors</b>, and <b
+                  style="color: #b82edf;">contextual environments</b>.
+                Qwen2 then processes these descriptions into five hierarchical levels, progressively compressing
+                different aspects of the 3D assets.</span>
+            </h2>
             <img src="./static/images/annot.png" alt="Marvel Annotation Pipeline" style="width: 100%;" />
-            
+
           </div>
 
         </div>
@@ -427,51 +376,57 @@
   </section>
 
 
+  <!-- ----------------------- Multi Level Annotations ----------------------- -->
   <section class="section">
     <div class="container is-max-desktop is-light">
-        <div class="columns is-centered has-text-centered">
-            <div class="column">
-                <h2 class="title is-3"> 🧩 Multi Level Annotations </h2>
-                <div>
-                  <h2 class="subtitle has-text-justified">
-                    <span>  Our multi-level annotation framework introduces a hierarchical visual 
-                      elaboration strategy, enabling flexible descriptions of 
-                      3D reconstructions at varying levels of detail. Instead of relying on rigid, direct 
-                      prompts—which often limit expressive capability—we adopt a progressive prompting approach. 
-                      This method allows models to generate context-aware outputs tailored for diverse use cases,
-                       from richly detailed geometric descriptions to concise tags optimized for rapid prototyping. 
-                       Each level incrementally distills complexity, 
-                      supporting adaptive content generation for tasks that require anything from comprehensive modeling insights to minimal semantic cues. </span></h2>
-                     
-                      <div class="image-box">
-                        <img src="./static/images/multi_level.png" alt="Multi Level Annotation" style="border-radius: 8px;">
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3"> 🧩 Multi Level Annotations </h2>
+          <div>
+            <h2 class="subtitle has-text-justified">
+              <span> Our multi-level annotation framework introduces a hierarchical visual
+                elaboration strategy, enabling flexible descriptions of
+                3D reconstructions at varying levels of detail. Instead of relying on rigid, direct
+                prompts—which often limit expressive capability—we adopt a progressive prompting approach.
+                This method allows models to generate context-aware outputs tailored for diverse use cases,
+                from richly detailed geometric descriptions to concise tags optimized for rapid prototyping.
+                Each level incrementally distills complexity,
+                supporting adaptive content generation for tasks that require anything from comprehensive modeling
+                insights to minimal semantic cues. </span>
+            </h2>
 
-<section class="section">
-  <div class="container is-max-desktop is-light">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-        
-        <h2 class="title is-3">🧬 Domain Specific Annotations</h2>
-        
-        <div>
-          <h2 class="subtitle has-text-justified">
-            <span>
-              High-quality 3D annotations require more than visual accuracy—they need domain-aware context. 
-              We leverage user-generated metadata from source datasets to enrich descriptions with relevant semantics. 
-              Since this metadata often includes noise or sensitive content, we apply a filtering stage to retain only clean, 
-              domain-specific terms like technical labels or character names. While optional, this enhances annotation quality 
-              without being essential to the pipeline.
-            </span>
-          </h2>
+            <div class="image-box">
+              <img src="./static/images/multi_level.png" alt="Multi Level Annotation" style="border-radius: 8px;">
+            </div>
+          </div>
         </div>
-           <!-- Navigation (arrows + dots) -->
-           <div class="slider-navigation">
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------- Domain-Specific Annotations --------------------- -->
+  <section class="section">
+    <div class="container is-max-desktop is-light">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+
+          <h2 class="title is-3">🧬 Domain Specific Annotations</h2>
+
+          <div>
+            <h2 class="subtitle has-text-justified">
+              <span>
+                High-quality 3D annotations require more than visual accuracy—they need domain-aware context.
+                We leverage user-generated metadata from source datasets to enrich descriptions with relevant semantics.
+                Since this metadata often includes noise or sensitive content, we apply a filtering stage to retain only
+                clean,
+                domain-specific terms like technical labels or character names. While optional, this enhances annotation
+                quality
+                without being essential to the pipeline.
+              </span>
+            </h2>
+          </div>
+          <!-- Navigation (arrows + dots) -->
+          <div class="slider-navigation">
             <!-- Left arrow -->
             <button class="slider-btn left" onclick="prevSlide()">&#10094;</button>
 
@@ -490,6 +445,7 @@
               <span class="dot" onclick="goToSlide(9)"></span>
               <span class="dot" onclick="goToSlide(10)"></span>
               <span class="dot" onclick="goToSlide(11)"></span>
+              <span class="dot" onclick="goToSlide(12)"></span>
             </div>
 
             <!-- Right arrow -->
@@ -498,158 +454,178 @@
 
           <!-- Slider Container -->
           <div class="slider-container">
-            
-            
+
+
             <!-- Wrapper for Sketchfab models -->
             <div class="slider-wrapper">
-              
+
               <!-- 1. Anime Characters -->
               <div class="slide">
                 <h2 class="subtitle-1">Anime Characters</h2>
-                <iframe src="https://sketchfab.com/models/554e124c17ee40bfbd4222a1a89e0036/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/554e124c17ee40bfbd4222a1a89e0036/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The 3D model features Roronoa Zoro from One Piece, holding three swords, 
-                  with a blue dragon coiling around him. A water splash surrounds them, 
-                  adding intensity to the dynamic scene.</i>
+                  <i>The 3D model features Roronoa Zoro from One Piece, holding three swords,
+                    with a blue dragon coiling around him. A water splash surrounds them,
+                    adding intensity to the dynamic scene.</i>
                 </p>
               </div>
 
               <!-- 2. Game Characters -->
               <div class="slide">
                 <h2 class="subtitle-1">Game Characters</h2>
-                <iframe src="https://sketchfab.com/models/6672ed4758ed4f8ab77ddae20b5019e6/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/6672ed4758ed4f8ab77ddae20b5019e6/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The 3D model shows Ghost Jawbone from Call of Duty Mobile. He wears a black helmet, 
-                  a brownish-khaki cape, a dark green shirt with a tattoo, an olive green vest with a red pouch, 
-                  olive green cargo pants, and dark combat boots. The character stands upright with a flowing cape.</i>
+                  <i>The 3D model shows Ghost Jawbone from Call of Duty Mobile. He wears a black helmet,
+                    a brownish-khaki cape, a dark green shirt with a tattoo, an olive green vest with a red pouch,
+                    olive green cargo pants, and dark combat boots. The character stands upright with a flowing
+                    cape.</i>
                 </p>
               </div>
 
               <!-- 3. Automotive -->
               <div class="slide">
                 <h2 class="subtitle-1">Automotive</h2>
-                <iframe src="https://sketchfab.com/models/a46108178fe04beab93efb41088eedf4/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/a46108178fe04beab93efb41088eedf4/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The Harley Davidson XR1200x is a black motorcycle with a sturdy frame, 
-                  V-twin engine, and dual exhaust pipes. It has a black leather seat, raised handlebars, 
-                  and a round headlight. The bike is streamlined and aggressive-looking, with disc brakes and visible suspension.</i>
+                  <i>The Harley Davidson XR1200x is a black motorcycle with a sturdy frame,
+                    V-twin engine, and dual exhaust pipes. It has a black leather seat, raised handlebars,
+                    and a round headlight. The bike is streamlined and aggressive-looking, with disc brakes and visible
+                    suspension.</i>
                 </p>
               </div>
 
               <!-- 4. CAD Model -->
               <div class="slide">
                 <h2 class="subtitle-1">CAD Model</h2>
-                <iframe src="https://sketchfab.com/models/25fde36e9e4a4339a6927d0f14a8ecde/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/25fde36e9e4a4339a6927d0f14a8ecde/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The Keystone 6" Knife Gate Valve is a cylindrical industrial valve with a rectangular gearbox 
-                  and a handwheel for manual operation. It has symmetrical bolt holes and is made of smooth, gray metal. 
-                  Used for controlling fluid flow in harsh conditions.</i>
+                  <i>The Keystone 6" Knife Gate Valve is a cylindrical industrial valve with a rectangular gearbox
+                    and a handwheel for manual operation. It has symmetrical bolt holes and is made of smooth, gray
+                    metal.
+                    Used for controlling fluid flow in harsh conditions.</i>
+                </p>
+              </div>
+
+              <!-- 5. Animals -->
+              <div class="slide">
+                <h2 class="subtitle-1">Animal</h2>
+                <iframe src="https://sketchfab.com/models/e530fd4c7f264088ad8dce405349f88e/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <p class="sketchfab-captions">
+                  <i>A 3D model of a Redcap Oranda goldfish with a rounded body,
+                    bright red cap, and delicate, feathery fins. It has detailed eyes and a flowing tail fin.</i>
                 </p>
               </div>
 
               <!-- 5. Flower -->
               <div class="slide">
                 <h2 class="subtitle-1">Flower</h2>
-                <iframe src="https://sketchfab.com/models/95ad071ace894098b1a5431c4a6c3567/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/95ad071ace894098b1a5431c4a6c3567/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>A 3D model of a Marsh Marigold with yellow flowers and green, heart-shaped leaves. 
-                  The flowers have five petals and a center with stamens. Slender stems support the leaves and flowers. 
-                  The model is bright and simple.</i>
+                  <i>A 3D model of a Marsh Marigold with yellow flowers and green, heart-shaped leaves.
+                    The flowers have five petals and a center with stamens. Slender stems support the leaves and
+                    flowers.
+                    The model is bright and simple.</i>
                 </p>
               </div>
 
               <!-- 6. Atomic Structure -->
               <div class="slide">
                 <h2 class="subtitle-1">Atomic Structure</h2>
-                <iframe src="https://sketchfab.com/models/ec26547a2e4e40f4975b8689eb133687/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/ec26547a2e4e40f4975b8689eb133687/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>Vitamin B2 (Riboflavin) is a complex molecule with a central ring system and extending side chains. 
-                  It has an elongated, irregular shape and uses color coding to differentiate atoms: carbon (grey/black), 
-                  oxygen (red), nitrogen (blue), and hydrogen (white/grey).</i>
+                  <i>Vitamin B2 (Riboflavin) is a complex molecule with a central ring system and extending side chains.
+                    It has an elongated, irregular shape and uses color coding to differentiate atoms: carbon
+                    (grey/black),
+                    oxygen (red), nitrogen (blue), and hydrogen (white/grey).</i>
                 </p>
               </div>
 
               <!-- 7. Food -->
               <div class="slide">
                 <h2 class="subtitle-1">Food</h2>
-                <iframe src="https://sketchfab.com/models/2fb933a56822411f982e259e3b04671c/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/2fb933a56822411f982e259e3b04671c/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>Three pieces of salmon nigiri sushi on a wooden board, with a small bowl of soy sauce. 
-                  The sushi has oval rice balls topped with pink salmon, green and red garnishes. 
-                  The wooden board has rounded edges, and the soy sauce bowl is circular and matte. 
-                  A small green spot is on the board.</i>
+                  <i>Three pieces of salmon nigiri sushi on a wooden board, with a small bowl of soy sauce.
+                    The sushi has oval rice balls topped with pink salmon, green and red garnishes.
+                    The wooden board has rounded edges, and the soy sauce bowl is circular and matte.
+                    A small green spot is on the board.</i>
                 </p>
               </div>
 
               <!-- 8. Daily Object -->
               <div class="slide">
                 <h2 class="subtitle-1">Daily Object</h2>
-                <iframe src="https://sketchfab.com/models/936288f27801425882fa7c7979939ba7/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/936288f27801425882fa7c7979939ba7/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The Siemens Coffee Machine is a sleek, rectangular device with a bean hopper on top, 
-                  a control panel below, a transparent water tank on the left, and a metallic drip tray at the bottom. 
-                  It is mostly black with a transparent tank and a silver tray.</i>
+                  <i>The Siemens Coffee Machine is a sleek, rectangular device with a bean hopper on top,
+                    a control panel below, a transparent water tank on the left, and a metallic drip tray at the bottom.
+                    It is mostly black with a transparent tank and a silver tray.</i>
                 </p>
               </div>
 
               <!-- 9. Mythological Character -->
               <div class="slide">
                 <h2 class="subtitle-1">Mythological Character</h2>
-                <iframe src="https://sketchfab.com/models/abf2bad197324238bfbaa36a023cb5b6/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/abf2bad197324238bfbaa36a023cb5b6/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The 3D model shows Perseus, a human figure in ancient Greek armor, riding a white winged horse named Pegasus. 
-                  They appear to be flying, with Perseus holding a sword and shield. The horse has smooth white fur and feathered wings.</i>
+                  <i>The 3D model shows Perseus, a human figure in ancient Greek armor, riding a white winged horse
+                    named Pegasus.
+                    They appear to be flying, with Perseus holding a sword and shield. The horse has smooth white fur
+                    and feathered wings.</i>
                 </p>
               </div>
 
               <!-- 10. Monument -->
               <div class="slide">
                 <h2 class="subtitle-1">Monument</h2>
-                <iframe src="https://sketchfab.com/models/88946f0b3be444fc9c85be22af10d152/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/88946f0b3be444fc9c85be22af10d152/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The Monument of Dante Alighieri shows a standing figure of Dante in flowing robes, holding a book. 
-                  It stands on a decorated stone plinth and is made of smooth, polished marble. Located outdoors in Padua, Italy.</i>
+                  <i>The Monument of Dante Alighieri shows a standing figure of Dante in flowing robes, holding a book.
+                    It stands on a decorated stone plinth and is made of smooth, polished marble. Located outdoors in
+                    Padua, Italy.</i>
                 </p>
               </div>
 
               <!-- 11. Scene -->
               <div class="slide">
                 <h2 class="subtitle-1">Scene</h2>
-                <iframe src="https://sketchfab.com/models/a7a4164592bf448aa446f13ed1997401/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/a7a4164592bf448aa446f13ed1997401/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>A colorful flamingo stands in a tranquil pond, surrounded by green lily pads with white flowers and tall grasses. 
-                  The pond water is glossy, and the flamingo has a rainbow gradient on its wings. 
-                  The base is flat and brownish, creating a peaceful, natural scene.</i>
+                  <i>A colorful flamingo stands in a tranquil pond, surrounded by green lily pads with white flowers and
+                    tall grasses.
+                    The pond water is glossy, and the flamingo has a rainbow gradient on its wings.
+                    The base is flat and brownish, creating a peaceful, natural scene.</i>
                 </p>
               </div>
 
               <!-- 12. Digital Surface -->
               <div class="slide">
                 <h2 class="subtitle-1">Digital Surface</h2>
-                <iframe src="https://sketchfab.com/models/081a30689cad4d47b77db98eec45bb54/embed"
-                        width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                <iframe src="https://sketchfab.com/models/081a30689cad4d47b77db98eec45bb54/embed" width="100%"
+                  height="400" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
                 <p class="sketchfab-captions">
-                  <i>The 3D model shows the Glaciar Perito Moreno in Santa Cruz, Argentina. 
-                  It features jagged mountains, a large turquoise lake, and ice formations extending into the water. 
-                  The surrounding area has green grass and brown rocks. Rivers flow into the lake from the mountains. 
-                  The scene is natural and isolated, highlighting the glacier's grandeur.</i>
+                  <i>The 3D model shows the Glaciar Perito Moreno in Santa Cruz, Argentina.
+                    It features jagged mountains, a large turquoise lake, and ice formations extending into the water.
+                    The surrounding area has green grass and brown rocks. Rivers flow into the lake from the mountains.
+                    The scene is natural and isolated, highlighting the glacier's grandeur.</i>
                 </p>
               </div>
 
             </div> <!-- End slider-wrapper -->
 
-            
+
             <!-- End slider-navigation -->
 
           </div> <!-- End slider-container -->
@@ -658,227 +634,298 @@
 
       </div> <!-- End column -->
     </div> <!-- End columns -->
-  </div> <!-- End container -->
-</section>
+    </div> <!-- End container -->
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop is-light">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
+  <!-- ----------------------------- MARVEL-FX3D ------------------------------ -->
+  <section class="section">
+    <div class="container is-max-desktop is-light">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
 
-        <h2 class="title is-3">🎨 MARVEL-FX3D</h2>
-        <div>
-          <img src="./static/images/marvel_fx3d.png" alt="Marvel Annotation Pipeline" style="width: 100%;" />
+          <h2 class="title is-3">🎨 MARVEL-FX3D</h2>
+          <div>
+            <img src="./static/images/marvel_fx3d.png" alt="Marvel Annotation Pipeline" style="width: 100%;" />
+            <h2 class="subtitle has-text-justified">
+              <span>
+                <span class="highlight dnerf">MARVEL-FX3D</span> is our Text-to-3D pipeline that finetunes Stable
+                Diffusion 3.5
+                on MARVEL captions of Objaverse dataset and uses pretrained Stable Fast 3D to generate a textured mesh
+                in 15s.
+              </span>
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ----------------------------- Text-to-3D ------------------------------ -->
+  <section class="section">
+    <div class="container is-max-desktop is-light">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+
+          <h2 class="title is-3">🧊 Text-to-3D Generation</h2>
+
+          <!-- === FX3D SLIDER NAVIGATION === -->
+          <div class="fx3d-slider-nav">
+            <button class="fx3d-slider-btn left">&#10094;</button>
+            <div class="fx3d-dots">
+              <span class="fx3d-dot" onclick="fx3dGoToSlide(0)"></span>
+              <span class="fx3d-dot" onclick="fx3dGoToSlide(1)"></span>
+              <span class="fx3d-dot" onclick="fx3dGoToSlide(2)"></span>
+              <span class="fx3d-dot" onclick="fx3dGoToSlide(2)"></span>
+            </div>
+            <button class="fx3d-slider-btn right">&#10095;</button>
+          </div>
+
+          <!-- === FX3D SLIDER === -->
+          <div class="fx3d-slider-container">
+            <div class="fx3d-slider-wrapper">
+
+              <!-- Slide 1 -->
+              <div class="fx3d-slide">
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/spear.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="5" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Spear Model"></model-viewer>
+                  <p class="fx3d-caption">A traditional spear with a decorative spearhead, a smooth metallic shaft, and
+                    a teardrop-shaped gem. The spearhead has three elongated blades and a spherical section with small
+                    protrusions. It is primarily metallic blue with a cyan or turquoise gem.</p>
+                </div>
+
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/stone.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="2" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Stone Model"></model-viewer>
+                  <p class="fx3d-caption">A rocky landscape with a large, dark blue, jagged rock and smaller, smooth
+                    gray boulders. A small, bright cyan dot is in the upper part.</p>
+                </div>
+
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="fx3d-slide">
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/laser_cutter.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="2" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Laser Cutter Model"></model-viewer>
+                  <p class="fx3d-caption">The Fusion Epilog Laser Cutter is a rectangular machine with a robust design.
+                    It has a transparent blue cover over the cutting area, a hinged lid for access, and a control panel
+                    with buttons and a screen. The base plate supports the material being cut, and side panels provide
+                    access for loading and ventilation.</p>
+                </div>
+
+
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/stone_moss.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="2" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Mossy Stone Wall"></model-viewer>
+                  <p class="fx3d-caption">The 3D model is a segment of an old stone wall with irregularly shaped stones.
+                    It has a rough, uneven texture with moss and plants growing on top. The colors are mostly gray and
+                    beige with green moss patches. The wall looks weathered and aged, suggesting a historic structure.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="fx3d-slide">
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/kunai.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="2" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Kunai Model"></model-viewer>
+                  <p class="fx3d-caption">The 3D model is of a pair of traditional Japanese throwing knives called
+                    kunai. Each has a long, pointed blade and a cylindrical handle with a circular ring and a small
+                    loop. The surface is smooth and matte, and the model is uniformly white.</p>
+                </div>
+
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/garden.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="1" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Palm Tree Model"></model-viewer>
+                  <p class="fx3d-caption">A tall palm tree with a slender trunk and a wide base, topped with large,
+                    feather-like fronds. Small rocks and plants surround the base, set on sandy ground. The trunk is
+                    brown, and the fronds are green.
+                  </p>
+                </div>
+
+
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="fx3d-slide">
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/wooden_box.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="2" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Kunai Model"></model-viewer>
+                  <p class="fx3d-caption">A wooden crate with a flat lid, four sides, a bottom, and metal reinforcement
+                    bars. It has visible wood grain and dark, aged metal. One side features green graffiti text.</p>
+                </div>
+
+                <div class="fx3d-card">
+                  <div class="glb-tag">GLB ✓</div>
+                  <model-viewer src="./static/images/fx3d_results/canon.glb" camera-controls auto-rotate
+                    auto-rotate-delay="1000" interaction-prompt="none" alt="Laser Cutter Model" tone-mapping="natural"
+                    exposure="1" shadow-intensity="1" rotation-per-second="45deg" style="width: 100%; height: 250px;"
+                    alt="Palm Tree Model"></model-viewer>
+                  <p class="fx3d-caption">A destroyed 2S3 Akatsiya cannon, elongated and cylindrical, with a curved
+                    barrel and angular turret. Heavily damaged, rusted, and charred, set in a desolate, debris-strewn
+                    battlefield.
+                  </p>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop is-light">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3"> 🧩 Quantitative Evaluation </h2>
+          <div style="padding-bottom: 20px;">
           <h2 class="subtitle has-text-justified">
             <span>
-              <span class="highlight dnerf">MARVEL-FX3D</span> is our Text-to-3D pipeline that finetunes Stable Diffusion 3.5
-              on MARVEL captions of Objaverse dataset and uses pretrained Stable Fast 3D to generate a textured mesh in 15s.
+              We evaluate the quality of our annotations and the performance of our pipeline using 
+              various metrics and comparisons with existing datasets and models. <i>(Hover over the plots for more details).</i>
             </span>
           </h2>
         </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop is-light">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-
-        <h2 class="title is-3">🧊 Text-to-3D Generation</h2>
-
-        <!-- === FX3D SLIDER NAVIGATION === -->
-        <div class="fx3d-slider-nav">
-          <button class="fx3d-slider-btn left">&#10094;</button>
-          <div class="fx3d-dots">
-            <span class="fx3d-dot" onclick="fx3dGoToSlide(0)"></span>
-            <span class="fx3d-dot" onclick="fx3dGoToSlide(1)"></span>
-            <span class="fx3d-dot" onclick="fx3dGoToSlide(2)"></span>
-            <span class="fx3d-dot" onclick="fx3dGoToSlide(2)"></span>
+          <!-- Tabs Navigation -->
+          <div class="tabs is-centered is-toggle is-toggle-rounded is-medium">
+            <ul>
+              <li class="is-active main-tab" data-tab="linguistic"><a><span>Linguistic Diversity</span></a></li>
+              <li class="main-tab" data-tab="alignment"><a><span>Image-Text Alignment</span></a></li>
+              <li class="main-tab" data-tab="accuracy"><a><span>Caption Accuracy</span></a></li>
+              <li class="main-tab" data-tab="generation"><a><span>Text-to-3D Generation</span></a></li>
+            </ul>
           </div>
-          <button class="fx3d-slider-btn right">&#10095;</button>
-        </div>
 
-        <!-- === FX3D SLIDER === -->
-        <div class="fx3d-slider-container">
-          <div class="fx3d-slider-wrapper">
+          <!-- Main Tab Content -->
 
-            <!-- Slide 1 -->
-            <div class="fx3d-slide">
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/spear.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="5"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Spear Model"></model-viewer>
-                <p class="fx3d-caption">A traditional spear with a decorative spearhead, a smooth metallic shaft, and a teardrop-shaped gem. The spearhead has three elongated blades and a spherical section with small protrusions. It is primarily metallic blue with a cyan or turquoise gem.</p>
-              </div>
-
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/stone.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="2"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Stone Model"></model-viewer>
-                <p class="fx3d-caption">A rocky landscape with a large, dark blue, jagged rock and smaller, smooth gray boulders. A small, bright cyan dot is in the upper part.</p>
-              </div>
-
+          <!-- Linguistic Diversity with Subtabs -->
+          <div id="linguistic" class="tab-content is-active">
+            <!-- Subtabs -->
+            <div class="tabs is-toggle is-small is-centered">
+              <ul>
+                <li class="is-active sub-tab" data-subtab="avg"><a><span>Average Length</span></a></li>
+                <li class="sub-tab" data-subtab="mtld"><a><span>MTLD</span></a></li>
+                <li class="sub-tab" data-subtab="unigram"><a><span>Unigram</span></a></li>
+                <li class="sub-tab" data-subtab="bigram"><a><span>Bi-Gram</span></a></li>
+              </ul>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="fx3d-slide">
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/laser_cutter.glb" 
-                camera-controls 
-                            auto-rotate 
-                            auto-rotate-delay="1000" 
-                            interaction-prompt="none" 
-                            alt="Laser Cutter Model"
-                            tone-mapping="natural"
-                            exposure="2"
-                            shadow-intensity="1"
-                            rotation-per-second="45deg"
-                            style="width: 100%; height: 250px;"
-                  alt="Laser Cutter Model"></model-viewer>
-                <p class="fx3d-caption">The Fusion Epilog Laser Cutter is a rectangular machine with a robust design. It has a transparent blue cover over the cutting area, a hinged lid for access, and a control panel with buttons and a screen. The base plate supports the material being cut, and side panels provide access for loading and ventilation.</p>
-              </div>
-              
-
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/stone_moss.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="2"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Mossy Stone Wall"></model-viewer>
-                <p class="fx3d-caption">The 3D model is a segment of an old stone wall with irregularly shaped stones. It has a rough, uneven texture with moss and plants growing on top. The colors are mostly gray and beige with green moss patches. The wall looks weathered and aged, suggesting a historic structure.</p>
-              </div>
-
+  
+          <!-- Tab Content -->
+          <div class="subtab-container">
+            <div id="avg" class="subtab-content is-active chart-box">
+              <canvas id="avgLengthChart"></canvas>
             </div>
-
-            <!-- Slide 3 -->
-            <div class="fx3d-slide">
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/kunai.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="2"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Kunai Model"></model-viewer>
-                <p class="fx3d-caption">The 3D model is of a pair of traditional Japanese throwing knives called kunai. Each has a long, pointed blade and a cylindrical handle with a circular ring and a small loop. The surface is smooth and matte, and the model is uniformly white.</p>
-              </div>
-
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/garden.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="1"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Palm Tree Model"></model-viewer>
-                <p class="fx3d-caption">A tall palm tree with a slender trunk and a wide base, topped with large, feather-like fronds. Small rocks and plants surround the base, set on sandy ground. The trunk is brown, and the fronds are green.
-                </p>
-              </div>
-
-
+            <div id="mtld" class="subtab-content chart-box">
+              <canvas id="mtldChart"></canvas>
             </div>
-
-            <!-- Slide 4 -->
-            <div class="fx3d-slide">
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/wooden_box.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="2"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Kunai Model"></model-viewer>
-                <p class="fx3d-caption">A wooden crate with a flat lid, four sides, a bottom, and metal reinforcement bars. It has visible wood grain and dark, aged metal. One side features green graffiti text.</p>
-              </div>
-
-              <div class="fx3d-card">
-                <div class="glb-tag">GLB ✓</div>
-                <model-viewer src="./static/images/fx3d_results/canon.glb" camera-controls 
-                auto-rotate 
-                auto-rotate-delay="1000" 
-                interaction-prompt="none" 
-                alt="Laser Cutter Model"
-                tone-mapping="natural"
-                exposure="1"
-                shadow-intensity="1"
-                rotation-per-second="45deg"
-                style="width: 100%; height: 250px;"
-                  alt="Palm Tree Model"></model-viewer>
-                <p class="fx3d-caption">A destroyed 2S3 Akatsiya cannon, elongated and cylindrical, with a curved barrel and angular turret. Heavily damaged, rusted, and charred, set in a desolate, debris-strewn battlefield.
-                </p>
-              </div>
-
-              
+            <div id="unigram" class="subtab-content chart-box">
+              <canvas id="unigramChart"></canvas>
             </div>
-
+            <div id="bigram" class="subtab-content chart-box">
+              <canvas id="bigramChart"></canvas>
+            </div>
           </div>
-        </div>
+          </div>
+        
+          <!-- Subtab Content -->
+          <div id="alignment" class="tab-content">
+            <!-- Subtabs -->
+            <div class="tabs is-toggle is-small is-centered">
+              <ul>
+                <li class="is-active sub-tab" data-subtab="gpt4-align"><a><span>GPT-4 Evaluation</span></a></li>
+                <li class="sub-tab" data-subtab="human-align"><a><span>Human Evaluation</span></a></li>
+              </ul>
+            </div>
+          
+            <!-- Subtab content -->
+            <div class="subtab-container">
+              <div id="gpt4-align" class="subtab-content is-active chart-box">
+                <canvas id="gpt4PieChart"></canvas>
+              </div>
+              <div id="human-align" class="subtab-content chart-box">
+                <canvas id="humanPieChart"></canvas>
+              </div>
+            </div>
+          
+          </div>
+      
+          <div id="accuracy" class="tab-content">
+            <!-- Subtabs -->
+            <div class="tabs is-toggle is-small is-centered">
+              <ul>
+                <li class="is-active sub-tab" data-subtab="gpt4-caption"><a><span>GPT-4 Evaluation</span></a></li>
+                <li class="sub-tab" data-subtab="human-caption"><a><span>Human Evaluation</span></a></li>
+              </ul>
+            </div>
+          
+            <!-- Subtab content -->
+            <div class="subtab-container">
+              <div id="gpt4-caption" class="subtab-content is-active chart-box">
+                <canvas id="gpt4CaptionBar"></canvas>
+              </div>
+              <div id="human-caption" class="subtab-content chart-box">
+                <canvas id="humanCaptionBar"></canvas>
+              </div>
+            </div>
+          </div>
+          
+      
+          <div id="generation" class="tab-content">
+            <div class="chart-box">
+              <canvas id="textTo3DRadar"></canvas>
+            </div>
+          </div>
+          
 
-      </div>
-    </div>
-  </div>
-</section>
+
+        </div>
+  </section>
 
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      
+
       <h2 class="title">BibTeX</h2>
       <div class="citation_metadata">
         <code id="metadata1">
-    <span style="color: rgb(195, 92, 7)">@article</span>{<span style="color: rgb(7, 117, 195)">sinha2024marvel</span>,
-      title = {MARVEL-40M+: Multi-Level Visual Elaboration for High-Fidelity Text-to-3D Content Creation},
-      author = {Sinha, Sankalp and Khan, Mohammad Sadil and Usama, Muhammad and Sam, Shino and Stricker, Didier and Ali, Sk Aziz and Afzal, Muhammad Zeshan},
-      journal = {arXiv preprint arXiv:2411.17945},
-      year = {2024}
-    }
-    </code>
+  <span style="color: rgb(195, 92, 7)">@article</span>{<span style="color: rgb(7, 117, 195)">sinha2024marvel</span>,
+    title = {MARVEL-40M+: Multi-Level Visual Elaboration for High-Fidelity Text-to-3D Content Creation},
+    author = {Sinha, Sankalp and Khan, Mohammad Sadil and Usama, Muhammad and Sam, Shino and Stricker, Didier and Ali, Sk Aziz and Afzal, Muhammad Zeshan},
+    journal = {arXiv preprint arXiv:2411.17945},
+    year = {2024}
+  }
+  </code>
 
         <button id="copyButton1" onclick="copyText('metadata1', 'copyButton1')" class="copy-button"
           aria-label="Copy citation">
@@ -901,27 +948,27 @@
 
 
   <footer class="footer">
-    
+
     <div class="container">
       <div class="content has-text-centered">
         <!-- <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a> -->
+        href="./static/videos/nerfies_paper.pdf">
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <i class="fab fa-github"></i>
+    </a> -->
 
-      <footer style="border-radius: 10px;">
-        <!-- Footer content goes here -->
-        <p style="color: black">&copy; 2025 Sankalp Sinha and Mohammad Sadil Khan. All rights reserved.</p>
-    </footer>
+        <footer style="border-radius: 10px;">
+          <!-- Footer content goes here -->
+          <p style="color: black">&copy; 2025 Mohammad Sadil Khan and Sankalp Sinha. All rights reserved.</p>
+        </footer>
       </div>
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is borrowed from <a>Nerfies</a>, licensed under a <a rel="license"
+              This website is borrowed and modified from <a>Nerfies</a>, licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
