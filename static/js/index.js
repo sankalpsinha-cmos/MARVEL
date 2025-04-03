@@ -142,6 +142,8 @@ window.onload = function () {
 };
 
 let chartsRendered = false;
+let chartsalignmentRendered = false;
+let chartsaccuracyRendered = false;
 let animationDuration = 1500;
 let fontSize = 16;
 let captionChartsRendered = false;
@@ -176,17 +178,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (target === "alignment") {
         resetSubtab("gpt4-align");
-        if (!chartsRendered) {
+        if (!chartsalignmentRendered) {
           renderPieCharts();
-          chartsRendered = true;
+          chartsalignmentRendered = true;
         }
       }
 
       if (target === "accuracy") {
         resetSubtab("gpt4-caption");
-        if (!chartsRendered) {
+        if (!chartsaccuracyRendered) {
           renderCaptionCharts();
-          chartsRendered = true;
+          chartsaccuracyRendered = true;
         }
       }
 
@@ -216,8 +218,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Auto-render if Linguistic is default visible
   renderAllCharts();
-  renderPieCharts();
-  renderCaptionCharts();
+  // renderPieCharts();
+  // renderCaptionCharts();
   chartsRendered = true;
 });
 
@@ -418,6 +420,9 @@ function renderCaptionCharts() {
         title: {
           display: true,
           text: "Caption Accuracy (GPT-4 Evaluation)",
+          font: {
+            size: fontSize, // Increase X-axis font size here
+          },
         },
         legend: {
           display: false,
@@ -437,6 +442,9 @@ function renderCaptionCharts() {
           max: 100,
           ticks: {
             stepSize: 10,
+            font: {
+              size: fontSize, // Increase X-axis font size here
+            },
           },
         },
       },
@@ -464,9 +472,15 @@ function renderCaptionCharts() {
         title: {
           display: true,
           text: "Caption Accuracy (Human Evaluation)",
+          font: {
+            size: fontSize, // Increase X-axis font size here
+          },
         },
         legend: {
           display: false,
+          font: {
+            size: fontSize, // Increase X-axis font size here
+          },
         },
         tooltip: {
           callbacks: {
@@ -483,6 +497,9 @@ function renderCaptionCharts() {
           max: 100,
           ticks: {
             stepSize: 10,
+            font: {
+              size: fontSize, // Increase X-axis font size here
+            },
           },
         },
       },
@@ -572,7 +589,6 @@ function renderTextTo3DChart() {
           max: 8,
           ticks: {
             stepSize: 1,
-            
           },
 
           pointLabels: {
